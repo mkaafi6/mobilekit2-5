@@ -59,7 +59,7 @@
   - `gh auth setup-git` configured git's HTTPS credential helper, so `git push` keeps working.
 - **SSH key** generated at `~/.ssh/id_ed25519` (no passphrase, persistent). NOT yet added to GitHub — adding via API needs the `admin:public_key` scope. To use SSH, add the public key at GitHub → Settings → SSH and GPG keys:
   ```
-  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIALAV7H6r+n7AZk2QkFsB0wHcE+1HfXUO5Ho30+WEIa mobilekit2-5
+  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIALAV7H6r+n7AZk2LQkFsB0wHcE+1HfXUO5Ho30+WEIa mobilekit2-5
   ```
 
 ## 6. Deployment (GitHub Pages)
