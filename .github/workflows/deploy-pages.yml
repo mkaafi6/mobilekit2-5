@@ -1,0 +1,45 @@
+# Deploys the MobileKit template (the HTML/ folder) to GitHub Pages.
+#
+# The live site will be served at:
+#   https://<username>.github.io/mobilekit2-5/
+#
+# Only the HTML/ folder is published as the site root; the Documentation/ and
+# Source/ folders stay in the repo but are not served.
+
+name: Deploy MobileKit to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site (HTML folder)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: HTML
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

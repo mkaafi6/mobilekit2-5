@@ -1,0 +1,13 @@
+# Dependencies (live-server dev tool — not part of the template)
+node_modules/
+npm-debug.log*
+
+# macOS junk
+.DS_Store
+__MACOSX/
+._*
+
+# Editor / OS
+*.swp
+.idea/
+.vscode/

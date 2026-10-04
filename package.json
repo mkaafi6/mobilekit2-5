@@ -1,0 +1,13 @@
+{
+  "name": "mobilekit2.5",
+  "version": "2.5.0",
+  "description": "Mobilekit - Bootstrap 4 PWA Mobile UI Kit / template, served with live-server.",
+  "private": true,
+  "scripts": {
+    "start": "live-server HTML --port=5500 --host=0.0.0.0 --no-browser --entry-file=index.html",
+    "dev": "live-server HTML --port=5500 --host=0.0.0.0 --no-browser --entry-file=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
